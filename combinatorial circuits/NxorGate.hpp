@@ -7,7 +7,7 @@ class NxorGate : public Gate{
     private:
         const string GATENAME;
     public:
-        NxorGate(Circuit * _firstInput, Circuit * _secondInput);
+        NxorGate(Circuit * firstInput, Circuit * secondInput);
         string getGateName() const override;
         bool evaluate() const override;
 };

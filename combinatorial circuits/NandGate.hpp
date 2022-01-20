@@ -7,7 +7,7 @@ class NandGate : public Gate{
     private:
         const string GATENAME;
     public:
-        NandGate(Circuit * _firstInput, Circuit * _secondInput);
+        NandGate(Circuit * firstInput, Circuit * secondInput);
         string getGateName() const override;
         bool evaluate() const override;
 };

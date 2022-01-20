@@ -1,6 +1,7 @@
 #include "InputGate.hpp"
 
-InputGate::InputGate(char _name, bool value) : name(_name){
+InputGate::InputGate(char name, bool value){
+    this->name = name;
     this->value = value;
 }
 

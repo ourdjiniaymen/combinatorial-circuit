@@ -8,7 +8,7 @@ using namespace std;
 
 class InputGate : public Circuit{
     private:
-        const char name;
+        char name;
         bool value;
     public:
         InputGate(char _name, bool value);

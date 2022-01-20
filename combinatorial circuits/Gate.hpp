@@ -10,10 +10,12 @@ using namespace std;
 class Gate : public Circuit{
     private:
         const string GATENAME;
+        Circuit * firstInput;
+        Circuit * secondInput;
     public:
-        const Circuit * firstInput;
-        const Circuit * secondInput;
-        Gate(Circuit * _firstInput, Circuit * _secondInput);
+        Gate(Circuit * firstInput, Circuit * secondInput);
+        Circuit * getFirstInput() const;
+        Circuit * getSecondInput() const;
         virtual string getGateName() const = 0;
         int getDepth() const;
         bool isInput() const override;

@@ -13,14 +13,15 @@
 
 using namespace std;
 
-
 int main(){
-   InputGate * a = new InputGate('a', false);
+   InputGate * a = new InputGate('a', true);
    InputGate * b = new InputGate('b', false);
-   AndGate * andGate = new AndGate(a, b);
-   OrGate * orGate = new OrGate(a, andGate);
+   Gate * andGate = new AndGate(a, b);
+   Gate * andGate_two = new AndGate(a, andGate);
+   Gate * orGate = new OrGate(andGate, andGate_two);
    OutputGate * A = new OutputGate('A', orGate);
-  // A->displayTextualForm();
-   //A->saveInFile();
-   cout << A;
+   A->displayTextualForm();
+   A->saveInFile();
+   OutputGate * B = new OutputGate("A.txt");
+   B->displayTextualForm();
 }

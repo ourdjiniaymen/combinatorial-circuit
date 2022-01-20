@@ -1,10 +1,10 @@
 #include "NxorGate.hpp"
 
-NxorGate::NxorGate(Circuit * _firstInput, Circuit * _secondInput):Gate(_firstInput, _secondInput), GATENAME("NXOR"){}
+NxorGate::NxorGate(Circuit * firstInput, Circuit * secondInput):Gate(firstInput, secondInput), GATENAME("NXOR"){}
 
 
 bool NxorGate::evaluate() const {
-    return !(firstInput->evaluate() != secondInput->evaluate());
+    return !(getFirstInput()->evaluate() != getSecondInput()->evaluate());
 }
 
 string NxorGate::getGateName() const {

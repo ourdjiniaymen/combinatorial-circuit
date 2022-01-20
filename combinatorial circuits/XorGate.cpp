@@ -1,10 +1,10 @@
 #include "XorGate.hpp"
 
-XorGate::XorGate(Circuit * _firstInput, Circuit * _secondInput):Gate(_firstInput, _secondInput), GATENAME("XOR"){}
+XorGate::XorGate(Circuit * firstInput, Circuit * secondInput):Gate(firstInput, secondInput), GATENAME("XOR"){}
 
 
 bool XorGate::evaluate() const {
-    return firstInput->evaluate() != secondInput->evaluate();
+    return getFirstInput()->evaluate() != getSecondInput()->evaluate();
 }
 
 string XorGate::getGateName() const {

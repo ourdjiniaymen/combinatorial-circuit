@@ -1,10 +1,10 @@
 #include "OrGate.hpp"
 
-OrGate::OrGate(Circuit * _firstInput, Circuit * _secondInput):Gate(_firstInput, _secondInput), GATENAME("OR"){}
+OrGate::OrGate(Circuit * firstInput, Circuit * secondInput):Gate(firstInput, secondInput), GATENAME("OR"){}
 
 
 bool OrGate::evaluate() const {
-    return firstInput->evaluate() || secondInput->evaluate();
+    return getFirstInput()->evaluate() || getSecondInput()->evaluate();
 }
 
 string OrGate::getGateName() const {

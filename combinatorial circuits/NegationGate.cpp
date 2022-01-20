@@ -1,10 +1,10 @@
 #include "NegationGate.hpp"
 
-NegationGate::NegationGate(Circuit * _firstInput):Gate(_firstInput,nullptr), GATENAME("NEGATE"){}
+NegationGate::NegationGate(Circuit * firstInput):Gate(firstInput,nullptr), GATENAME("NEGATE"){}
 
 
 bool NegationGate::evaluate() const {
-    return !(firstInput->evaluate());
+    return !(getFirstInput()->evaluate());
 }
 
 string NegationGate::getGateName() const {
@@ -17,7 +17,7 @@ void NegationGate::displayInConsole(ostream& out) const {
 
 string NegationGate::getTextualForm() const {
     stringstream ss;
-    ss << getGateName() << "(" << firstInput->getTextualForm() << ")";
+    ss << getGateName() << "(" << getFirstInput()->getTextualForm() << ")";
     return ss.str();
 }
 

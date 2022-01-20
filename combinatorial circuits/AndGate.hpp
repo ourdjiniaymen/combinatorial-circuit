@@ -7,7 +7,7 @@ class AndGate : public Gate{
     private:
         const string GATENAME;
     public:
-        AndGate(Circuit * _firstInput, Circuit * _secondInput);
+        AndGate(Circuit * firstInput, Circuit * secondInput);
         string getGateName() const override;
         bool evaluate() const override;
 };

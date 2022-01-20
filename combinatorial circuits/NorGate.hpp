@@ -7,7 +7,7 @@ class NorGate : public Gate{
     private:
         const string GATENAME;
     public:
-        NorGate(Circuit * _firstInput, Circuit * _secondInput);
+        NorGate(Circuit * firstInput, Circuit * secondInput);
         string getGateName() const override;
         bool evaluate() const override;
 };

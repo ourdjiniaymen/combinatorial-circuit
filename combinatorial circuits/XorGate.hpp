@@ -7,7 +7,7 @@ class XorGate : public Gate{
     private:
         const string GATENAME;
     public:
-        XorGate(Circuit * _firstInput, Circuit * _secondInput);
+        XorGate(Circuit * firstInput, Circuit * secondInput);
         string getGateName() const override;
         bool evaluate() const override;
 };

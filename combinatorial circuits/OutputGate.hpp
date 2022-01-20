@@ -10,20 +10,19 @@ using namespace std;
 
 class OutputGate{
     private:
-        const char name;
-        const Circuit * output;
+        char name;
+        Circuit * output;
         string getTextualForm() const;
         int getDepth() const;
         bool evaluate() const;
+        Circuit * synthesizeOutput(string textualForm);
     public:
-        OutputGate(char _name, Circuit * _output);
-        //OutputGate(string fileName);
+        OutputGate(char name, Circuit * output);
+        //Synthétiser OutputGate à partir d'une forme textuelle écrit dans un fichier
+        OutputGate(string fileName);
         void displayTextualForm() const;
-        void DisplayInConsole();
+        void displayInConsole() const;
         void saveInFile() const;
 };
-
-ostream& operator<<(ostream& out, const OutputGate * oG);
-
 #endif
 

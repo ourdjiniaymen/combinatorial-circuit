@@ -9,7 +9,7 @@ class NegationGate : public Gate{
     private:
         const string GATENAME;
     public:
-        NegationGate(Circuit * _firstInput);
+        NegationGate(Circuit * firstInput);
         string getGateName() const override;
         bool evaluate() const override;
         void displayInConsole(ostream& out) const override;

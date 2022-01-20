@@ -7,7 +7,7 @@ class OrGate : public Gate{
     private:
         const string GATENAME;
     public:
-        OrGate(Circuit * _firstInput, Circuit * _secondInput);
+        OrGate(Circuit * firstInput, Circuit * secondInput);
         string getGateName() const override;
         bool evaluate() const override;
 };

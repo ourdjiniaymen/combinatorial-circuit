@@ -1,10 +1,10 @@
 #include "AndGate.hpp"
 
-AndGate::AndGate(Circuit * _firstInput, Circuit * _secondInput):Gate(_firstInput, _secondInput), GATENAME("AND"){}
+AndGate::AndGate(Circuit * firstInput, Circuit * secondInput):Gate(firstInput, secondInput), GATENAME("AND"){}
 
 
 bool AndGate::evaluate() const {
-    return firstInput->evaluate() && secondInput->evaluate();
+    return getFirstInput()->evaluate() && getSecondInput()->evaluate();
 }
 
 string AndGate::getGateName() const {

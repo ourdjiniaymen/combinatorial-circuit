@@ -1,1 +1,1 @@
-A = OR(a = 0, AND(a = 0, b = 0)) = 0
+A = OR(AND(a = 1, b = 0), AND(a = 1, AND(a = 1, b = 0))) = 0
